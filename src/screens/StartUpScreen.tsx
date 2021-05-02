@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     borderRadius: 6,
     marginBottom: 12,
+    color: "black"
   },
   startGameButton: {
     marginTop: 16,
