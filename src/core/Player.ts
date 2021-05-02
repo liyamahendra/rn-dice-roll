@@ -43,6 +43,15 @@ export default class Player {
         }
     }
 
+    hadTwoConsecutiveOnes = () => {
+        let didHaveTwoConsecutiveOnes = false;
+        didHaveTwoConsecutiveOnes = (this.scores[this.scores.length - 1] == 1 && this.scores[this.scores.length - 2] == 1)
+        if(didHaveTwoConsecutiveOnes) {
+            this.scores.push(0); // To ensure case when the user has 1 for the third time
+        }
+        return didHaveTwoConsecutiveOnes;
+    }
+
     getAllScore = () : [] => {
         return this.scores;
     }

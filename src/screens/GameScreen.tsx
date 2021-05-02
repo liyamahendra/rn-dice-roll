@@ -23,7 +23,12 @@ const GameScreen = ({ navigation, route }) => {
       setResult("");
     } else {
       if (Store.currentGame.getPlayer() != null && Store.currentGame.getPlayer() != undefined) {
-        setMessage(`It is ${Store.currentGame.getPlayer().getPlayerName()}'s now turn to roll the dice.`)
+        if(Store.currentGame.getPlayer().hadTwoConsecutiveOnes()) {
+          Store.currentGame.moveToNextPlayer(); // Skip the turn
+          setMessage(`It is ${Store.currentGame.getPlayer().getPlayerName()}'s now turn to roll the dice.`)
+        } else {
+          setMessage(`It is ${Store.currentGame.getPlayer().getPlayerName()}'s now turn to roll the dice.`)
+        }
       }
     }
   });
