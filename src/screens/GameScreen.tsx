@@ -123,7 +123,9 @@ const GameScreen = ({ navigation, route }) => {
     });
 
     return () => {
-      RNShake.removeEventListener('ShakeEvent', simulateDiceRoll);
+      RNShake.removeEventListener('ShakeEvent', () => {
+        simulateDiceRoll();
+      });
     };
   }, [simulateDiceRoll]);
 
