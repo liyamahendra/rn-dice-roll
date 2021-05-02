@@ -27,3 +27,4 @@
 
 https://user-images.githubusercontent.com/911879/116822400-38bb9f00-ab9c-11eb-8605-eace998cac01.mp4
 
+The demo shows that in the first attempt, Player 3 scores **1** twice, so Player 3's turn is skipped and in the next attempt, when Player 1 scores **6**, Player 1 gets another attempt.
