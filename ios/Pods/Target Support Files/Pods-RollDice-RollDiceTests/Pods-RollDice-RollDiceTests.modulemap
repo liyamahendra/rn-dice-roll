@@ -1,0 +1,6 @@
+module Pods_RollDice_RollDiceTests {
+  umbrella header "Pods-RollDice-RollDiceTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

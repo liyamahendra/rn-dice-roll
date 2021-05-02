@@ -1,0 +1,6 @@
+module Pods_RollDice {
+  umbrella header "Pods-RollDice-umbrella.h"
+
+  export *
+  module * { export * }
+}
