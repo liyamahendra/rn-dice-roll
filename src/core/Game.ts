@@ -34,7 +34,7 @@ export default class Game {
         return players;
     }
 
-    getPlayer = (): Player => {
+    getCurrentPlayer = (): Player => {
         let player = this.sequenceOfPlayers[this.currentPlayerIndex];
         if (player.isGameComplete()) {
 
@@ -55,21 +55,6 @@ export default class Game {
         return player;
     }
 
-    isGameOver = (): boolean => {
-        let players = [];
-        for (var i = 0; i < this.sequenceOfPlayers.length; i++) {
-            if (!this.sequenceOfPlayers[i].isGameComplete()) {
-                players.push(this.sequenceOfPlayers[i]);
-            }
-        }
-
-        if (players.length == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     moveToNextPlayer = () => {
 
         let players = [];
@@ -86,4 +71,20 @@ export default class Game {
             this.currentPlayerIndex = 0;
         }
     }
+
+    isGameOver = (): boolean => {
+        let players = [];
+        for (var i = 0; i < this.sequenceOfPlayers.length; i++) {
+            if (!this.sequenceOfPlayers[i].isGameComplete()) {
+                players.push(this.sequenceOfPlayers[i]);
+            }
+        }
+
+        if (players.length == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

@@ -23,12 +23,12 @@ const GameScreen = ({ navigation, route }) => {
       setMessage("Game Over!");
       setResult(" ");
     } else {
-      if (Store.currentGame.getPlayer() != null && Store.currentGame.getPlayer() != undefined) {
-        if(Store.currentGame.getPlayer().hadTwoConsecutiveOnes()) {
+      if (Store.currentGame.getCurrentPlayer() != null && Store.currentGame.getCurrentPlayer() != undefined) {
+        if(Store.currentGame.getCurrentPlayer().hadTwoConsecutiveOnes()) {
           Store.currentGame.moveToNextPlayer(); // Skip the turn
-          setMessage(`It is ${Store.currentGame.getPlayer().getPlayerName()}'s now turn to roll the dice.`)
+          setMessage(`It is ${Store.currentGame.getCurrentPlayer().getPlayerName()}'s now turn to roll the dice.`)
         } else {
-          setMessage(`It is ${Store.currentGame.getPlayer().getPlayerName()}'s now turn to roll the dice.`)
+          setMessage(`It is ${Store.currentGame.getCurrentPlayer().getPlayerName()}'s now turn to roll the dice.`)
         }
       }
     }
@@ -77,8 +77,8 @@ const GameScreen = ({ navigation, route }) => {
     let result = "";
     let rankOnCompletion = (Store.currentGame.getAllPlayersSequence().length - Store.currentGame.getCurrentlyPlayingPlayersSequence().length) + 1;
 
-    let currentPlayer = Store.currentGame.getPlayer();
-    Store.currentGame.getPlayer().addScore(dice, rankOnCompletion);
+    let currentPlayer = Store.currentGame.getCurrentPlayer();
+    currentPlayer.addScore(dice, rankOnCompletion);
 
     if (Store.currentGame.isGameOver()) {
       setMessage("Game Over!");
