@@ -141,7 +141,7 @@ const GameScreen = ({ navigation, route }) => {
           style={styles.dice}
         />
         <TouchableOpacity onPress={simulateDiceRoll} style={styles.rollDiceButton}>
-          <Text style={styles.rollDiceLabel}>Roll Dice</Text>
+          <Text style={styles.rollDiceLabel}>Tap to Roll Dice / Shake Device</Text>
         </TouchableOpacity>
       </View>}
 
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
     width: 60
   },
   rollDiceButton: {
-    marginTop: 16,
+    marginTop: 20,
     alignSelf: "center",
     borderWidth: 1,
     borderColor: "black",
