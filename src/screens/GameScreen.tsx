@@ -10,17 +10,18 @@ import Player from '../core/Player';
 import Images from "../assets/images";
 
 const GameScreen = ({ navigation, route }) => {
+  
   const DICE_ROLL_DURATION = 5000;
   const DICE_ROLL_ANIMATION_DURATION = 500;
 
   const [message, setMessage] = React.useState("");
-  const [result, setResult] = React.useState("");
+  const [result, setResult] = React.useState(" ");
   const [diceImage, setDiceImage] = React.useState(require("../assets/images/1.png"));
 
   React.useEffect(() => {
     if (Store.currentGame.isGameOver()) {
       setMessage("Game Over!");
-      setResult("");
+      setResult(" ");
     } else {
       if (Store.currentGame.getPlayer() != null && Store.currentGame.getPlayer() != undefined) {
         if(Store.currentGame.getPlayer().hadTwoConsecutiveOnes()) {
@@ -35,6 +36,7 @@ const GameScreen = ({ navigation, route }) => {
 
   const simulateDiceRoll = () => {
     let duration = 0;
+    setResult(" ");
 
     const interval = setInterval(function () {
       let dice = Utils.getRandomValue(6);

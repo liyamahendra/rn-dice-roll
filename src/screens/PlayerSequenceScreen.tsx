@@ -13,7 +13,7 @@ const PlayerSequenceScreen = ({ navigation, route }) => {
     <View style={styles.container}>
       <Text style={styles.infoMessage}>Below is the sequence in which the players which get their turn to roll the dice: </Text>
       <View style={styles.sequenceWrapper}>
-        {Store.currentGame.getCurrentlyPlayingPlayersSequence().map((player: Player, index) => {
+        {Store.currentGame.getAllPlayersSequence().map((player: Player, index) => {
           return <Text key={index} style={styles.playerName}>{` \u2022 ${player.getPlayerName()}`}</Text>;
         })}
       </View>

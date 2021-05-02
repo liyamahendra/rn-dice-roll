@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-mdpi_src_assets_images_3.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-mdpi/src_assets_images_3.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-mdpi_src_assets_images_4.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-mdpi/src_assets_images_4.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-xxhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-xxhdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-mdpi_src_assets_images_1.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-mdpi/src_assets_images_1.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-xxxhdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-xhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-xhdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-mdpi_src_assets_images_2.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-mdpi/src_assets_images_2.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/raw_app.json.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/raw/app.json"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-hdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-hdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-mdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-mdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-mdpi_src_assets_images_6.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-mdpi/src_assets_images_6.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-mdpi_node_modules_reactnavigation_stack_src_views_assets_backiconmask.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-mdpi/node_modules_reactnavigation_stack_src_views_assets_backiconmask.png"
+    },
+    {
+        "merged": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/intermediates/res/merged/release/drawable-mdpi_src_assets_images_5.png.flat",
+        "source": "/Users/mahendraliya/Documents/_dev/2021/interview/rn-dice-roll/android/app/build/generated/res/react/release/drawable-mdpi/src_assets_images_5.png"
+    }
+]

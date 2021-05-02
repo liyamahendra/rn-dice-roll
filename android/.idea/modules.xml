@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RollDice.iml" filepath="$PROJECT_DIR$/.idea/modules/RollDice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RollDice.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RollDice.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-521042379/RollDice.react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/-521042379/RollDice.react-native-community_masked-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1748000702/RollDice.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/-1748000702/RollDice.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/824073370/RollDice.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/824073370/RollDice.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/154906667/RollDice.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/154906667/RollDice.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1132316157/RollDice.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-1132316157/RollDice.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1502389122/RollDice.react-native-shake.iml" filepath="$PROJECT_DIR$/.idea/modules/1502389122/RollDice.react-native-shake.iml" />
+    </modules>
+  </component>
+</project>

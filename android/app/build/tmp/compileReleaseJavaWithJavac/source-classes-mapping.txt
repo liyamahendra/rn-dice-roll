@@ -1,0 +1,9 @@
+com/rolldice/MainActivity.java
+ com.rolldice.MainActivity
+com/rolldice/BuildConfig.java
+ com.rolldice.BuildConfig
+com/rolldice/MainApplication.java
+ com.rolldice.MainApplication
+ com.rolldice.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
