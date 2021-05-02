@@ -1,12 +1,12 @@
 # Roll Dice
 
-## General 
+## General:
 
 - N-players roll a 6 faced dice in Round robin fashion
 - Shake the phone to roll the dice. Their points increase by the number (1 to 6) achieved by the roll.
 - As soon as the player accumulates M points the game complets for that users and a rank is assigned. Remaining players continue to play until they accumulate M points. Game ends when all players have collected M points
 
-## Rules
+## Rules:
 
 * The order in which users roll the dice is randomly decided at the start of the game.
 * If a player roles the value '6' then they get another chance to roll the dice again.
@@ -22,3 +22,8 @@
 * Display the current rank table to show the points of all users and their rank after each roll, before next player's turn.
 * Show appropriate message on screen if the user gets another chance or is penalized.
 * If a user completes the game, display an appropriate message on screen with their rank and continue game with the remaining users.
+
+## Demo:
+
+https://user-images.githubusercontent.com/911879/116822400-38bb9f00-ab9c-11eb-8605-eace998cac01.mp4
+
