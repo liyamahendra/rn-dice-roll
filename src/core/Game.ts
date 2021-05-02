@@ -55,10 +55,22 @@ export default class Game {
         return player;
     }
 
-    moveToNextPlayer = () => {
+    isGameOver = (): boolean => {
+        let players = [];
+        for (var i = 0; i < this.sequenceOfPlayers.length; i++) {
+            if (!this.sequenceOfPlayers[i].isGameComplete()) {
+                players.push(this.sequenceOfPlayers[i]);
+            }
+        }
 
-        let currentPlayer = this.sequenceOfPlayers[this.currentPlayerIndex];
-        let currentIndex = this.sequenceOfPlayers.indexOf(currentPlayer);
+        if (players.length == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    moveToNextPlayer = () => {
 
         let players = [];
         for (var i = 0; i < this.sequenceOfPlayers.length; i++) {
@@ -72,21 +84,6 @@ export default class Game {
             this.gameOver = true;
         } else if (this.currentPlayerIndex >= players.length) {
             this.currentPlayerIndex = 0;
-        }
-    }
-
-    isGameOver = (): boolean => {
-        let players = [];
-        for (var i = 0; i < this.sequenceOfPlayers.length; i++) {
-            if (!this.sequenceOfPlayers[i].isGameComplete()) {
-                players.push(this.sequenceOfPlayers[i]);
-            }
-        }
-
-        if (players.length == 0) {
-            return true;
-        } else {
-            return false;
         }
     }
 }
