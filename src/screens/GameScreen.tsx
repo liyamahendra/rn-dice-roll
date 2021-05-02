@@ -103,6 +103,8 @@ const GameScreen = ({ navigation, route }) => {
 
       if (!Store.currentGame.isGameOver() && (!currentPlayer.isGameComplete() && dice != 6)) {
         Store.currentGame.moveToNextPlayer();
+      } else if(!Store.currentGame.isGameOver() && currentPlayer.isGameComplete()) {
+        Store.currentGame.moveToNextPlayer();
       }
 
       if (Store.currentGame.isGameOver()) {

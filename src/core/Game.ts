@@ -36,20 +36,14 @@ export default class Game {
 
     getCurrentPlayer = (): Player => {
         let player = this.sequenceOfPlayers[this.currentPlayerIndex];
-        if (player.isGameComplete()) {
-
-            let players = [];
-            for (var i = 0; i < this.sequenceOfPlayers.length; i++) {
-                if (!this.sequenceOfPlayers[i].isGameComplete()) {
-                    players.push(this.sequenceOfPlayers[i]);
+        if(player.isGameComplete()) {
+            while(!player.isGameComplete()) {
+                ++this.currentPlayerIndex;
+                if(this.currentPlayerIndex > this.sequenceOfPlayers.length) {
+                    this.currentPlayerIndex = 0;
                 }
+                player = this.sequenceOfPlayers[this.currentPlayerIndex];
             }
-
-            if(this.currentPlayerIndex == players.length - 1) {
-                this.currentPlayerIndex = 0;
-            }
-
-            player = players[this.currentPlayerIndex];
         }
 
         return player;
@@ -57,18 +51,42 @@ export default class Game {
 
     moveToNextPlayer = () => {
 
-        let players = [];
-        for (var i = 0; i < this.sequenceOfPlayers.length; i++) {
-            if (!this.sequenceOfPlayers[i].isGameComplete()) {
-                players.push(this.sequenceOfPlayers[i]);
-            }
-        }
+        let players = this.getCurrentlyPlayingPlayersSequence();
 
-        this.currentPlayerIndex++;
         if (players.length == 0) {
             this.gameOver = true;
-        } else if (this.currentPlayerIndex >= players.length) {
-            this.currentPlayerIndex = 0;
+        } else {
+            let currentPlayer = this.getCurrentPlayer();
+            let currentIndex = this.sequenceOfPlayers.indexOf(currentPlayer);
+            let nextPlayerIndex = ++currentIndex;
+
+            if(nextPlayerIndex > this.sequenceOfPlayers.length - 1) {
+                nextPlayerIndex = 0;
+            }
+
+            console.log("================");
+            console.log("1 nextPlayerIndex: ", nextPlayerIndex);
+            let nextPlayer = this.sequenceOfPlayers[nextPlayerIndex];
+            console.log("nextPlayer.isGameComplete(): ", nextPlayer.isGameComplete());
+
+            if(nextPlayer.isGameComplete()) {
+                do {
+                    ++nextPlayerIndex;
+                    if(nextPlayerIndex >= this.sequenceOfPlayers.length) {
+                        nextPlayerIndex = 0;
+                    }
+                    nextPlayer = this.sequenceOfPlayers[nextPlayerIndex];
+                    console.log("LOOP: nextPlayer.isGameComplete(): ", nextPlayer.isGameComplete());
+                    console.log("LOOP: nextPlayerIndex: ", nextPlayerIndex);
+
+                    if(!nextPlayer.isGameComplete()) {
+                        break;
+                    }
+                } while(!nextPlayer.isGameComplete())
+            }
+
+            this.currentPlayerIndex = nextPlayerIndex;
+            console.log("this.currentPlayerIndex: ", this.currentPlayerIndex);
         }
     }
 

@@ -13,6 +13,8 @@ const StartUpScreen = ({ navigation, route }) => {
 
   const startGame = () => {
 
+    // Reset game on 'Restart' click
+    Store.currentGame = new Game(0, 0);
     let players = parseInt(totalPlayers);
     let score = parseInt(totalToScore);
 
