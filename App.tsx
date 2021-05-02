@@ -7,7 +7,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import StartUpScreen from './src/screens/StartUpScreen';
 import PlayerSequenceScreen from './src/screens/PlayerSequenceScreen';
 import GameScreen from './src/screens/GameScreen';
-import GameOverScreen from './src/screens/GameOverScreen';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +17,6 @@ function App() {
         <Stack.Screen name="StartUp" component={StartUpScreen} options={{ title: "Roll the Dice" }} />
         <Stack.Screen name="PlayerSequence" component={PlayerSequenceScreen} options={{ title: "Player Sequence", headerBackTitle: "Back" }} />
         <Stack.Screen name="Game" component={GameScreen} options={{ title: "Roll the Dice", headerLeft: () => null }} />
-        <Stack.Screen name="GameOver" component={GameOverScreen} options={{ title: "Game Over", headerLeft: () => null }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

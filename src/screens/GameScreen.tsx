@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
+import { CommonActions } from '@react-navigation/native';
 import RNShake from 'react-native-shake';
 
 import Utils from '../core/Utils';
@@ -97,7 +98,7 @@ const GameScreen = ({ navigation, route }) => {
         Store.currentGame.moveToNextPlayer();
       }
 
-      if(Store.currentGame.isGameOver()) {
+      if (Store.currentGame.isGameOver()) {
         setMessage("Game Over!");
       }
 
@@ -107,17 +108,29 @@ const GameScreen = ({ navigation, route }) => {
 
   React.useEffect(() => {
     RNShake.addEventListener('ShakeEvent', () => {
-      if(!Store.currentGame.isGameOver()) {
+      if (!Store.currentGame.isGameOver()) {
         simulateDiceRoll();
       }
     });
   }, []);
 
+  const restartGame = () => {
+    navigation.dispatch(
+      CommonActions.reset({
+        index: 1,
+        routes: [
+          { name: 'StartUp' },
+        ],
+      })
+    );
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.message}>{message}</Text>
       <Text style={styles.result}>{result}</Text>
-      <View style={styles.diceContainer}>
+
+     {!Store.currentGame.isGameOver() && <View style={styles.diceContainer}>
         <Image
           source={diceImage}
           style={styles.dice}
@@ -125,19 +138,28 @@ const GameScreen = ({ navigation, route }) => {
         <TouchableOpacity onPress={simulateDiceRoll} style={styles.rollDiceButton}>
           <Text style={styles.rollDiceLabel}>Roll Dice</Text>
         </TouchableOpacity>
-      </View>
+      </View>}
 
       <View style={styles.chart}>
-        <Text style={styles.rollDiceLabel}>Players In Game</Text>
-        {Store.currentGame.getCurrentlyPlayingPlayersSequence().map((player: Player, index) => {
-          return <Text key={index} style={styles.playerName}>{`${player.getPlayerName()} ::  Rank: ${player.rank} ::  Score: ${player.getTotalScore()}`}</Text>;
-        })}
-        <Text style={styles.rollDiceLabel}>{"\n\n"}</Text>
-
-        <Text style={styles.rollDiceLabel}>Leaderboard</Text>
+        <Text style={styles.title}>Leaderboard</Text>
+        <View style={styles.row}>
+          <Text style={styles.columnHeader}>Name</Text>
+          <Text style={styles.columnHeader}>Rank</Text>
+          <Text style={styles.columnHeader}>Score</Text>
+        </View>
         {Store.currentGame.getAllPlayersSequence().map((player: Player, index) => {
-          return <Text key={index} style={styles.playerName}>{`${player.getPlayerName()} ::  Rank: ${player.rank} ::  Score: ${player.getTotalScore()}`}</Text>;
+          return (
+            <View key={index} style={styles.row}>
+              <Text style={styles.playerName}>{`${player.getPlayerName()}`}</Text>
+              <Text style={styles.rank}>{`${player.getRank()}`}</Text>
+              <Text style={styles.score}>{`${player.getTotalScore()}`}</Text>
+            </View>
+          );
         })}
+
+        {Store.currentGame.isGameOver() && <TouchableOpacity onPress={restartGame} style={styles.rollDiceButton}>
+          <Text style={styles.rollDiceLabel}>Restart</Text>
+        </TouchableOpacity>}
       </View>
     </View>
   );
@@ -151,13 +173,13 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   message: {
-    fontSize: 16,
-    fontWeight: "400",
+    fontSize: 18,
+    fontWeight: "500",
     textAlign: "center",
     alignSelf: "center"
   },
   result: {
-    marginTop: 8,
+    marginTop: 12,
     fontSize: 16,
     fontWeight: "400",
     textAlign: "center",
@@ -187,10 +209,41 @@ const styles = StyleSheet.create({
     color: "red",
     fontWeight: "500",
   },
+  title: {
+    marginBottom: 12,
+    color: "red",
+    fontWeight: "500",
+  },
   chart: {
-    marginTop: 20
+    marginTop: "16%",
+  },
+  row: {
+    justifyContent: "center",
+    borderWidth: 1,
+    borderColor: "black",
+    flexDirection: "row",
+  },
+  columnHeader: {
+    width: 100,
+    textAlign: "center",
+    fontWeight: "700",
   },
   playerName: {
-    fontWeight: "700",
+    marginTop: 3,
+    marginBottom: 3,
+    textAlign: "center",
+    width: 100,
+  },
+  rank: {
+    marginTop: 3,
+    marginBottom: 3,
+    textAlign: "center",
+    width: 100,
+  },
+  score: {
+    marginTop: 3,
+    marginBottom: 3,
+    textAlign: "center",
+    width: 100,
   }
 });
