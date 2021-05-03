@@ -12,7 +12,7 @@ import Images from "../assets/images";
 let isDiceRollInProgress = false;
 
 const GameScreen = ({ navigation, route }) => {
-  
+
   const DICE_ROLL_DURATION = 5000;
   const DICE_ROLL_ANIMATION_DURATION = 500;
 
@@ -26,7 +26,7 @@ const GameScreen = ({ navigation, route }) => {
       setResult(" ");
     } else {
       if (Store.currentGame.getCurrentPlayer() != null && Store.currentGame.getCurrentPlayer() != undefined) {
-        if(Store.currentGame.getCurrentPlayer().hadTwoConsecutiveOnes()) {
+        if (Store.currentGame.getCurrentPlayer().hadTwoConsecutiveOnes()) {
           Store.currentGame.moveToNextPlayer(); // Skip the turn
           setMessage(`It is ${Store.currentGame.getCurrentPlayer().getPlayerName()}'s now turn to roll the dice.`)
         } else {
@@ -37,16 +37,16 @@ const GameScreen = ({ navigation, route }) => {
   });
 
   const simulateDiceRoll = () => {
-    if(isDiceRollInProgress) {
+    if (isDiceRollInProgress) {
       return;
     }
+
+    isDiceRollInProgress = true;
     
     let duration = 0;
     setResult(" ");
 
     const interval = setInterval(function () {
-      isDiceRollInProgress = true;
- 
       let dice = Utils.getRandomValue(6);
 
       let diceName = "";
@@ -112,7 +112,7 @@ const GameScreen = ({ navigation, route }) => {
 
       if (!Store.currentGame.isGameOver() && (!currentPlayer.isGameComplete() && dice != 6)) {
         Store.currentGame.moveToNextPlayer();
-      } else if(!Store.currentGame.isGameOver() && currentPlayer.isGameComplete()) {
+      } else if (!Store.currentGame.isGameOver() && currentPlayer.isGameComplete()) {
         Store.currentGame.moveToNextPlayer();
       }
 
@@ -126,7 +126,7 @@ const GameScreen = ({ navigation, route }) => {
 
   React.useEffect(() => {
     RNShake.addEventListener('ShakeEvent', () => {
-      if (!Store.currentGame.isGameOver()) {
+      if (!Store.currentGame.isGameOver() && !isDiceRollInProgress) {
         simulateDiceRoll();
       }
     });
@@ -148,7 +148,8 @@ const GameScreen = ({ navigation, route }) => {
       <Text style={styles.message}>{message}</Text>
       <Text style={styles.result}>{result}</Text>
 
-     {!Store.currentGame.isGameOver() && <View style={styles.diceContainer}>
+      {!Store.currentGame.isGameOver() && <View style={styles.diceContainer}>
+        <Text style={styles.result}>{(isDiceRollInProgress) ? "True" : "False"}</Text>
         <Image
           source={diceImage}
           style={styles.dice}
@@ -156,6 +157,7 @@ const GameScreen = ({ navigation, route }) => {
         <TouchableOpacity onPress={simulateDiceRoll} style={styles.rollDiceButton}>
           <Text style={styles.rollDiceLabel}>Tap to Roll Dice / Shake Device</Text>
         </TouchableOpacity>
+
       </View>}
 
       <View style={styles.chart}>
