@@ -9,6 +9,8 @@ import Store from '../core/Store';
 import Player from '../core/Player';
 import Images from "../assets/images";
 
+let isDiceRollInProgress = false;
+
 const GameScreen = ({ navigation, route }) => {
   
   const DICE_ROLL_DURATION = 5000;
@@ -35,10 +37,16 @@ const GameScreen = ({ navigation, route }) => {
   });
 
   const simulateDiceRoll = () => {
+    if(isDiceRollInProgress) {
+      return;
+    }
+    
     let duration = 0;
     setResult(" ");
 
     const interval = setInterval(function () {
+      isDiceRollInProgress = true;
+ 
       let dice = Utils.getRandomValue(6);
 
       let diceName = "";
@@ -66,6 +74,7 @@ const GameScreen = ({ navigation, route }) => {
 
       duration += DICE_ROLL_ANIMATION_DURATION;
       if (duration == DICE_ROLL_DURATION) {
+        isDiceRollInProgress = false;
         clearInterval(interval);
         diceRolled(dice);
       }
